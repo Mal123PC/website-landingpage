@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>123 PC | Launching July</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      background: radial-gradient(circle at 15% 20%, rgba(59,130,246,0.24), transparent 18%),
+                  radial-gradient(circle at 85% 10%, rgba(168,85,247,0.18), transparent 16%),
+                  radial-gradient(circle at 60% 75%, rgba(56,189,248,0.14), transparent 22%),
+                  linear-gradient(135deg, #020617 0%, #0f172a 55%, #161b2a 100%);
+      background-attachment: fixed;
+    }
+    .container {
+      max-width: 700px;
+      padding: 40px 30px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 0;
+      backdrop-filter: blur(22px);
+      box-shadow: 0 32px 90px rgba(7, 14, 38, 0.35);
+    }
+    .logo {
+      max-width: 220px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    .launch {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 25px 0;
+    }
+    .contact {
+      margin-top: 30px;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 20px;
+    }
+      .logo-stack {
+        width:380px;
+        margin:0 auto 30px;
+      }
+      .top-row,
+      .bottom-row {
+        display:flex;
+        align-items:flex-start;
+        width:100%;
+        gap:18px;
+      }
+      .bottom-row {
+        justify-content:center;
+        gap:26px;
+        margin-top:6px;
+      }
+
+    .piece {
+      width:116px;
+      height:116px;
+      border-radius:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      box-shadow:0 14px 30px rgba(0,0,0,0.22);
+      transform:translateY(-220px);
+      opacity: 0;
+      animation:stackDrop 0.9s forwards;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+    }
+    .piece.p, .piece.c {
+      width:128px;
+      height:128px;
+    }
+    .piece img {
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      display:block;
+      transform-origin:center;
+      padding:6px;
+      background:transparent;
+    }
+
+    .one { animation-delay:0s; }
+    .two { animation-delay:0.12s; }
+    .three { animation-delay:0.24s; }
+    .p { animation-delay:0.36s; }
+    .c { animation-delay:0.48s; }
+
+    @keyframes stackDrop {
+      0% { transform:translateY(-220px) rotate(-3deg); opacity: 0; }
+      70% { transform:translateY(16px) rotate(1deg); opacity: 1; }
+      100% { transform:translateY(0); opacity: 1; }
+    }
+
+    .block-logo {
+      display:flex;
+      justify-content:center;
+      gap:8px;
+      margin-bottom:30px;
+      min-height:70px;
+    }
+    .block {
+      width:60px;
+      height:60px;
+      border-radius:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:bold;
+      color:white;
+      font-size:1.5rem;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      animation: dropIn 1s forwards;
+      transform: translateY(-150px);
+      opacity:0;
+    }
+    .b1 { background:#ea580c; animation-delay:0s; }
+    .b2 { background:#16a34a; animation-delay:0.2s; }
+    .b3 { background:#2563eb; animation-delay:0.4s; }
+    .b4 { background:#0891b2; animation-delay:0.6s; }
+    .b5 { background:#1d4ed8; animation-delay:0.8s; }
+
+    @keyframes dropIn {
+      0% { transform: translateY(-150px); opacity:0; }
+      70% { transform: translateY(10px); opacity:1; }
+      100% { transform: translateY(0); opacity:1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-stack">
+      <div class="top-row">
+        <div class="piece one"><img src="Block1.png" alt="Block 1"></div>
+        <div class="piece two"><img src="Block2.png" alt="Block 2"></div>
+        <div class="piece three"><img src="Block3.png" alt="Block 3"></div>
+      </div>
+      <div class="bottom-row">
+        <div class="piece p"><img src="BlockP.png" alt="Block P"></div>
+        <div class="piece c"><img src="BlockC.png" alt="Block C"></div>
+      </div>
+    </div>
+
+    <h1>123 PC</h1>
+    <p>Professional PC Repairs, Home IT Support & Troubleshooting</p>
+
+    <div class="launch">Launching July 6th, 2026</div>
+
+    <div style="margin:30px auto; width:120px;">
+      <div style="display:flex; justify-content:center; gap:8px; margin-bottom:20px;">
+        <div style="width:12px; height:12px; border-radius:50%; background:#2563eb; animation:pulse 1.2s infinite;"></div>
+        <div style="width:12px; height:12px; border-radius:50%; background:#2563eb; animation:pulse 1.2s infinite 0.2s;"></div>
+        <div style="width:12px; height:12px; border-radius:50%; background:#2563eb; animation:pulse 1.2s infinite 0.4s;"></div>
+      </div>
+      <div id="countdown" style="font-weight:bold; font-size:1.1rem;"></div>
+    </div>
+
+    <p>
+      We’re getting ready to bring reliable, friendly local tech support to your home.
+    </p>
+
+    <p>
+      Repairs • Virus Removal • PC Health Checks • Upgrades • Home Visits • Remote Support
+    </p>
+
+    <div class="contact">
+      <p><strong>Phone / WhatsApp:</strong> 022 533 9389</p>
+      <p><strong>Email:</strong> mal@123pc.co.nz</p>
+    </div>
+  </div>
+  <script>
+    // Countdown to July 6, 2026
+    const launchDate = new Date('2026-07-06T00:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance <= 0) {
+        document.getElementById('countdown').innerHTML = 'We are live!';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      document.getElementById('countdown').innerHTML =
+        `${days} days ${hours} hours ${minutes} minutes`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
