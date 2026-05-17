@@ -191,8 +191,9 @@
     </div>
   </div>
   <script>
-    // Countdown to July 6, 2026
-    const launchDate = new Date('2026-07-06T00:00:00').getTime();
+    // Countdown to July 6, 2026 at 9:00 AM New Zealand Time (NZST, UTC+12)
+    // NZST is UTC+12 in July 2026, so 2026-07-06 09:00 NZT === 2026-07-05 21:00 UTC
+    const launchDate = Date.UTC(2026, 6, 5, 21, 0, 0); // returns ms since epoch in UTC
 
     function updateCountdown() {
       const now = new Date().getTime();
