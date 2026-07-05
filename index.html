@@ -147,13 +147,6 @@
       0%, 100% { opacity: 0.3; transform: scale(0.8); }
       50% { opacity: 1; transform: scale(1.2); }
     }
-    a {
-      color: #ffffff !important;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -173,27 +166,33 @@
     <h1>123 PC</h1>
     <p>Professional PC Repairs, Home IT Support & Troubleshooting</p>
 
-        <p>
-      We are here to bring reliable, friendly, local tech support to your home.
+    <div class="launch">Launching July 6th, 2026</div>
+
+    <div style="margin:30px auto; width:120px;">
+      <div style="display:flex; justify-content:center; gap:8px; margin-bottom:20px;">
+        <div style="width:12px; height:12px; border-radius:50%; background:#2563eb; animation:pulse 1.2s infinite;"></div>
+        <div style="width:12px; height:12px; border-radius:50%; background:#2563eb; animation:pulse 1.2s infinite 0.2s;"></div>
+        <div style="width:12px; height:12px; border-radius:50%; background:#2563eb; animation:pulse 1.2s infinite 0.4s;"></div>
+      </div>
+      <div id="countdown" style="font-weight:bold; font-size:1.1rem;"></div>
+    </div>
+
+    <p>
+      We’re getting ready to bring reliable, friendly local tech support to your home.
     </p>
 
     <p>
-      PC and Laptop Repairs • Virus Removal • PC Health Checks • Upgrades • Home Visits • Remote Support • Printer Setup & more!
+      Repairs • Virus Removal • PC Health Checks • Upgrades • Home Visits • Remote Support
     </p>
 
-    <p>
-      Over 20 years of experience in the IT industry!
-    </p>
-    
     <div class="contact">
       <p><strong>Phone / WhatsApp:</strong> 022 533 9389</p>
-      <p><strong>Email:</strong> <a href="mailto:mal@123pc.co.nz">mal@123pc.co.nz</a></p>
+      <p><strong>Email:</strong> mal@123pc.co.nz</p>
     </div>
   </div>
   <script>
-    // Countdown to July 6, 2026 at 9:00 AM New Zealand Time (NZST, UTC+12)
-    // NZST is UTC+12 in July 2026, so 2026-07-06 09:00 NZT === 2026-07-05 21:00 UTC
-    const launchDate = Date.UTC(2026, 6, 5, 21, 0, 0); // returns ms since epoch in UTC
+    // Countdown to July 6, 2026
+    const launchDate = new Date('2026-07-06T00:00:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
